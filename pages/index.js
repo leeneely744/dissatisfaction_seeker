@@ -40,14 +40,16 @@ export default function Home() {
 
       <main className={styles.main}>
         <img src="/dog.png" className={styles.icon} />
-        <h3>Name my pet</h3>
+        <h3>不満探索隊</h3>
         <form onSubmit={onSubmit}>
-          <input
-            type="text"
-            name="animal"
-            placeholder="Enter an animal"
+          <textarea
+            name="dissatisfactionSentence"
+            placeholder="Enter an dissatisfaction sentence"
             value={animalInput}
             onChange={(e) => setAnimalInput(e.target.value)}
+            style={{ 
+              height: "10rem",
+            }}
           />
           <input type="submit" value="Generate names" />
         </form>
